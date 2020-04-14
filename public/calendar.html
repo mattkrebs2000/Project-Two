@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little League Logger | Calendar</title>
+    <link rel="stylesheet" href="./styles/calendar.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    /> -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./js/calendar.js"></script>
+  </head>
+
+  <body>
+    <section>
+      <div id="welcomeDiv">
+        <p id="welcome">Welcome back <span id="userLogged"></span></p>
+        <button id="logout" type="button" class="btn btn-info">
+          Logout
+        </button>
+      </div>
+      <h1 id="year"></h1>
+      <div class="calendar"></div>
+      <div class="colorKey">
+        <div id="gameDay">Completed</div>
+        <div id="inProgress">In-progress</div>
+        <div id="incomplete">Upcoming</div>
+      </div>
+    </section>
+  </body>
+</html>

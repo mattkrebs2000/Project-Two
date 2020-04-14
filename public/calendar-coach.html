@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little League Logger | Calendar</title>
+    <link rel="stylesheet" href="./styles/calendar.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    /> -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="./js/calendar.js"></script>
+  </head>
+
+  <body>
+    <section>
+      <div id="welcomeDiv">
+        <p id="welcome">Welcome back <span id="userLogged"></span></p>
+        <button id="logout" type="button" class="btn btn-info">
+          Logout
+        </button>
+      </div>
+      <h1 id="year"></h1>
+      <div class="calendar"></div>
+      <button id="add">Add/Delete a Game</button>
+      <div class="colorKey">
+        <div id="gameDay">Completed</div>
+        <div id="inProgress">In-progress</div>
+        <div id="incomplete">Upcoming</div>
+      </div>
+      <!-- MODAL POPUP -->
+      <div
+        class="modal fade"
+        id="myModal2"
+        role="dialog"        
+        >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="staticBackdropLabel">
+                Add/Delete a Game
+              </h4>
+              <button
+                type="button"
+                >
+                <span class="close">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-form"id="formBox">
+                <form id="createGame">
+                  <div class="form-group">
+                    <label for="homeTeam">Home Team</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="homeTeam"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="awayTeam">Away Team</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="awayTeam"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="location">Location</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="location"
+                      required
+                    />
+                  </div><div class="form-group">
+                    <label for="date">Date</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="date"
+                      min="2020-03-01" 
+                      max="2020-09-30"
+                      required
+                    />
+                  </div>
+                  <div class="modal-footer justify-content-around">
+                    <button 
+                      id = "addGame" 
+                      type="submit" 
+                      class="btn btn-primary"
+                      data-dismiss="modal"
+                      >
+                      Add
+                    </button>
+                    <button 
+                      id = "deleteGame" 
+                      type="submit" 
+                      class="btn btn-primary"
+                      data-dismiss="modal"
+                      >
+                      Delete
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

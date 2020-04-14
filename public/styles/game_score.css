@@ -1,0 +1,145 @@
+.display-none {
+    display: none;
+}
+
+.main-section {
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.main-sectionC {
+    background-color: #5040FF;
+    border: 2px groove #0E009F;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.inning {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.inning {
+    text-shadow: 1px 1px 3px black;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.score {
+    background-color: red;
+    border: 2px solid blue;
+    padding: 4px;
+    text-align: center;
+}
+
+.scoreC {
+    background-color: red;
+    border: 2px solid #5040FF;
+    padding: 4px;
+    text-align: center;
+    box-shadow: -1px 1px 3px black;
+}
+
+.runs, .runsC {
+    background-color: red;
+    border: 1px solid white;
+    padding: 4px;
+    margin: 1px;
+    text-align: center;
+}
+
+.ticker {
+    border: 2px solid white;
+    background-color: lightblue;
+    margin-top: 10px;
+}
+
+.info {
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+.team {
+    text-align: right;
+    color: white;
+}
+
+.team {
+    text-shadow: 1px 1px 3px black;
+    text-align: right;
+    color: white;
+}
+
+#message {
+   
+}
+
+
+.comments {
+color: white;
+display: block;
+float:left;
+
+}
+.missing {
+    display:none;   
+}
+
+#tick {
+
+margin-right: -5000px;
+
+}
+
+#outer
+{
+width:3000px;
+height:25px; 
+overflow:hidden;
+margin-top: 15px;
+}
+
+span.comments {
+
+margin-right: 400px;
+
+}
+
+#support,#commentName,#commentComment {
+
+margin-top: 20px;
+margin-bottom: 10px; 
+
+
+}
+
+#commentName,#commentComment {
+
+color:white;
+} 
+
+#coachUpdates {
+    margin-top: 8px;
+    background-color: #cccccc;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#changeDate, #fixGame {
+    margin-top: 3px;
+}
+
+#endGame {
+    text-shadow: 1px 1px 3px black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+}

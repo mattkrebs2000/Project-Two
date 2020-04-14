@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="./js/game-score.js"></script>
+
+  <!--CSS style sheets-->
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="stylesheet" href="./styles/game_score.css" />
+  <title>Little League Logger | Game View</title>
+</head>
+
+<body>
+  <!--User 1 view of game statistics-->
+  <div class="container main-section">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" id="endGame" style="display: none"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 info" id="date">Date and Time</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 info" id="h_name">Home Team:</div>
+        <div class="col-md-6 info" id="loc">Location:</div>
+      </div>
+
+      <div class="row">
+          <div class="col-md-6 info" id="v_name">Visiting Team:</div>
+          <div class="col-md-6 info" id="address">Address:</div>
+      </div>
+
+        <div class = "container">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-1 inning">1</div>
+            <div class="col-md-1 inning">2</div>
+            <div class="col-md-1 inning">3</div>
+            <div class="col-md-1 inning">4</div>
+            <div class="col-md-1 inning">5</div>
+            <div class="col-md-1 inning">6</div>
+            <div class="col-md-1 inning OT" style="display: none">OT</div>
+            <div class="col-md-1 inning">RUNS</div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2 team home">HOME</div>
+          <div class="col-md-1 score" id="h1_score">A</div>
+          <div class="col-md-1 score" id="h2_score">B</div>
+          <div class="col-md-1 score" id="h3_score">C</div>
+          <div class="col-md-1 score" id="h4_score"></div>
+          <div class="col-md-1 score" id="h5_score"></div>
+          <div class="col-md-1 score" id="h6_score"></div>
+          <div class="col-md-1 score OT" id="h_overtime" style="display: none"></div>
+          <div class="col-md-1 runs" id="h_runs"></div>
+        </div>
+          
+        <div class="row">
+          <div class="col-md-2 team visit">VISTING</div>
+          <div class="col-md-1 score" id="v1_score">D</div>
+          <div class="col-md-1 score" id="v2_score">E</div>
+          <div class="col-md-1 score" id="v3_score">F</div>
+          <div class="col-md-1 score" id="v4_score"></div>
+          <div class="col-md-1 score" id="v5_score"></div>
+          <div class="col-md-1 score" id="v6_score"></div>
+          <div class="col-md-1 score OT" id="v_overtime" style="display: none"></div>
+          <div class="col-md-1 runs" id="v_runs"></div>
+        </div>
+        
+        </div>
+      </div>
+
+
+
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="d-flex justify-content-center">
+          <div id="outer" class="row"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="offset-md-1 col-md-3">
+        <div id="commentName" class="d-flex justify-content-center"><label for="fname">Email: </label>
+          <input type="text" id="getName" name="fname"></div>
+      </div>
+      <div class="offset-md-1 col-md-4">
+        <div id="commentComment" class="d-flex justify-content-center"><label for="fname"> Message: </label>
+          <input type="text" id="message" name="fname"></div>
+      </div>
+      <div class="offset-md-1 col-11 col-md-2">
+        <div class="d-flex justify-content-center"><button id="support">Submit</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!--Coach Update Game View -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-11-md"><button type="submit" class="btn btn-success submit" id="fixGame">Fix Game Scores</button></div>
+    </div>
+  </div>
+
+<div class="container main-sectionC" id="coachInput" style="display: none">
+    <div class="row">
+        <div class="col-md-12 info" id="message">Update the score for each inning by clicking on the inning and team. 
+          <br>Type in the new score, then press enter. </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 inning"></div>
+            <div class="col-md-1 inning">1</div>
+            <div class="col-md-1 inning">2</div>
+            <div class="col-md-1 inning">3</div>
+            <div class="col-md-1 inning">4</div>
+            <div class="col-md-1 inning">5</div>
+            <div class="col-md-1 inning">6</div>
+            <div class="col-md-1 inning OT" style="display: none">OT</div>
+            <div class="col-md-1 inning">RUNS</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 team home">HOME</div>
+            <div class="col-md-1 scoreC">
+              <input class="edit update-score"  id="h1_scoreC" data-teamInning="h1_score" type="number" min="0" max="25"></div>
+            <div class="col-md-1 scoreC"><span></span>
+              <input class="edit update-score" data-teamInning="h2_score" id="h2_scoreC" type="number" min="0" max="25"></div>
+            <div class="col-md-1 scoreC">
+              <input class="edit update-score" data-teamInning="h3_score" id="h3_scoreC" type="number" min="0" max="25"></div>
+            <div class="col-md-1 scoreC">
+              <input class="edit update-score" data-teamInning="h4_score" id="h4_scoreC" type="number" min="0" max="25"></div>
+            <div class="col-md-1 scoreC">
+              <input class="edit update-score" data-teamInning="h5_score" id="h5_scoreC" type="number" min="0" max="25"></div>
+            <div class="col-md-1 scoreC">
+              <input class="edit update-score" data-teamInning="h6_score" id="h6_scoreC" type="number" min="0" max="25"></div>
+            <div class="col-md-1 scoreC OT" style="display: none">
+              <input class="edit update-score" data-teamInning="h_overtime" id="h_overtimeC" type="number" min="0" max="25"></div>
+            <div class="col-md-1 runsC" id="h_runs"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 team visit">VISTING</div>
+            <div class="col-md-1 scoreC">
+              <input class="edit update-score" data-teamInning="v1_score" id="v1_scoreC" type="number" min="0" max="25"></div>
+            <div class="col-md-1 scoreC">
+              <input class="edit update-score" data-teamInning="v2_score" id="v2_scoreC" type="number" min="0" max="25"></div>
+            <div class="col-md-1 scoreC">
+              <input class="edit update-score" data-teamInning="v3_score" id="v3_scoreC" type="number" min="0" max="25"></div>
+            <div class="col-md-1 scoreC">
+              <input class="edit update-score" data-teamInning="v4_score" id="v4_scoreC" type="number" min="0" max="25"></div>
+            <div class="col-md-1 scoreC">
+              <input class="edit update-score" data-teamInning="v5_score" id="v5_scoreC" type="number" min="0" max="25"></div>
+            <div class="col-md-1 scoreC">
+              <input class="edit update-score" data-teamInning="v6_score" id="v6_scoreC" type="number" min="0" max="2"></div>
+              <div class="col-md-1 scoreC OT" style="display: none">
+                <input class="edit update-score" data-teamInning="v_overtime" id="v_overtimeC" type="number" min="0" max="25"></div>
+              <div class="col-md-1 runsC" id="v_runs"></div>
+        </div>
+
+        <div class="row" id="coachUpdates">
+          <div class="col-md-6" id="coachButtons">
+            <button type="submit" id="overtime" class="btn btn-success">Overtime</button>
+            <button type="submit" id="gameOver" class="btn btn-success">Game Over</button></div>
+          <div class="col-md-6">
+            <form id="form-date">
+              <div class="form-group">
+                <label for="date">New Date:</label>
+                <input placeholder="YYYY-MM-DD" type="date" class="form-control" id="newDate">
+                <button type="submit" class="btn btn-success submit" id="changeDate">Change Date</button>
+              </div>
+            </form>
+          </div>
+    </div>
+  </div>
+
+</body>
+</html>

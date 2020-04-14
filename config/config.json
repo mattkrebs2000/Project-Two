@@ -1,0 +1,27 @@
+{
+  "development": {
+    "username": "test",
+    "password": "",
+    "database": "llldb",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "B0otcamp!",
+    "database": "llldb",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "n4ikrskxb6hpphw4",
+    "password": "d75xzwhm1jy98dez",
+    "database": "mm6n0ewbecicbazw",
+    "host": "kavfu5f7pido12mr.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
+    "dialect": "mysql",
+    "use_env_variable": "JAWSDB_URL"
+  }
+}

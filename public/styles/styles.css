@@ -1,0 +1,43 @@
+
+
+
+
+.list-group-item {
+  line-height: 2.5;
+}
+
+#formBox {
+  width: 250px;
+  margin: auto;
+
+}
+#logo {
+  text-align: center;
+  width: 100%;
+  max-width: 425px;
+  height: auto;
+}
+
+#logo {
+  animation: fadein 3s;
+}
+@keyframes fadein {
+  from { margin-top: -300px}
+  to   {
+    margin-top:
+    10px}
+     from { margin-bottom: 800px}
+  to   {
+    margin-bottom:
+    10px}
+
+}
+
+
+button:hover {
+
+box-shadow: 0px 0px 20px#0053a0;
+
+
+}
+

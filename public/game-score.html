@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="./js/game-score.js"></script>
+
+  <!--CSS style sheets-->
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="stylesheet" href="./styles/game_score.css" />
+  <title>Little League Logger | Game View</title>
+</head>
+
+<body>
+  <!--User 1 view of game statistics-->
+  <div class="container main-section">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" id="endGame" style="display: none"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 info" id="date">Date and Time</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 info" id="h_name">Home Team:</div>
+        <div class="col-md-6 info" id="loc">Location:</div>
+      </div>
+
+      <div class="row">
+          <div class="col-md-6 info" id="v_name">Visiting Team:</div>
+          <div class="col-md-6 info" id="address">Address:</div>
+      </div>
+
+        <div class = "container">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-1 inning">1</div>
+            <div class="col-md-1 inning">2</div>
+            <div class="col-md-1 inning">3</div>
+            <div class="col-md-1 inning">4</div>
+            <div class="col-md-1 inning">5</div>
+            <div class="col-md-1 inning">6</div>
+            <div class="col-md-1 inning OT" style="display: none">OT</div>
+            <div class="col-md-1 inning">RUNS</div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2 team home">HOME</div>
+          <div class="col-md-1 score" id="h1_score">A</div>
+          <div class="col-md-1 score" id="h2_score">B</div>
+          <div class="col-md-1 score" id="h3_score">C</div>
+          <div class="col-md-1 score" id="h4_score"></div>
+          <div class="col-md-1 score" id="h5_score"></div>
+          <div class="col-md-1 score" id="h6_score"></div>
+          <div class="col-md-1 score OT" id="h_overtime" style="display: none"></div>
+          <div class="col-md-1 runs" id="h_runs"></div>
+        </div>
+          
+        <div class="row">
+          <div class="col-md-2 team visit">VISTING</div>
+          <div class="col-md-1 score" id="v1_score">D</div>
+          <div class="col-md-1 score" id="v2_score">E</div>
+          <div class="col-md-1 score" id="v3_score">F</div>
+          <div class="col-md-1 score" id="v4_score"></div>
+          <div class="col-md-1 score" id="v5_score"></div>
+          <div class="col-md-1 score" id="v6_score"></div>
+          <div class="col-md-1 score OT" id="v_overtime" style="display: none"></div>
+          <div class="col-md-1 runs" id="v_runs"></div>
+        </div>
+        
+        </div>
+      </div>
+
+
+
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="d-flex justify-content-center">
+          <div id="outer" class="row"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="offset-md-1 col-md-3">
+        <div id="commentName" class="d-flex justify-content-center"><label for="fname">Email: </label>
+          <input type="text" id="getName" name="fname"></div>
+      </div>
+      <div class="offset-md-1 col-md-4">
+        <div id="commentComment" class="d-flex justify-content-center"><label for="fname"> Message: </label>
+          <input type="text" id="message" name="fname"></div>
+      </div>
+      <div class="offset-md-1 col-11 col-md-2">
+        <div class="d-flex justify-content-center"><button id="support">Submit</button></div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</body>
+</html>
