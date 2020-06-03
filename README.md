@@ -1,6 +1,6 @@
 # Little League Logger
 
-This application can be found [here.](https://agile-shelf-37421.herokuapp.com/)
+This application can be found [here.](https://little-league-logger.herokuapp.com/)
 
 ![alt text][logo]
 
